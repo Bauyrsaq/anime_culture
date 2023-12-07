@@ -25,6 +25,7 @@
     text-align: center;
     font-size: 5em;
     color: var(--color-white);
+    margin-bottom: 30px;
 }
 
 .anime__container-filters {

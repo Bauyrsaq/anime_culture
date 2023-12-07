@@ -32,7 +32,7 @@
     color: #fff;
 }
 
-.about, .culture, .anime, .about-us {
+.about, .culture, .anime, .contacts {
     font-size: 1.1em;
     text-decoration: none;
     color:rgb(221, 221, 221);
@@ -41,7 +41,7 @@
     padding: 0 6px;
 }
 
-.about:after, .culture::after, .anime::after, .about-us::after {
+.about:after, .culture::after, .anime::after, .contacts::after {
     content: "";
     position: absolute;
     background-image: linear-gradient(to right, rgb(0, 217, 255), rgb(0, 4, 255));
@@ -52,11 +52,11 @@
     transition: 0.3s;
 }
 
-.about:hover::after, .culture:hover::after, .anime:hover::after, .about-us:hover::after {
+.about:hover::after, .culture:hover::after, .anime:hover::after, .contacts:hover::after {
     width: 100%;
 }
 
-.about:hover, .culture:hover, .anime:hover, .about-us:hover {
+.about:hover, .culture:hover, .anime:hover, .contacts:hover {
     text-shadow: 0 0 5px rgb(59, 210, 230), 0 0 12px rgb(59, 210, 230), 0 0 20px rgb(59, 210, 230);
     color: white;
 }
