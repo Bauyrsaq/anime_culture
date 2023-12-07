@@ -29,7 +29,9 @@
 }
 
 .anime__container-filters {
-    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 5px solid var(--color-white);
+    margin: 0 auto 50px;
 }
 
 .anime__container-filters-list {
@@ -70,4 +72,35 @@
 .anime__container-filters-btn img {
     width: 36px;
     height: 36px;
+}
+
+
+.anime__container-filter {
+    padding: 5px;
+    margin: 0 auto;
+}
+
+
+.anime__container-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.anime__container-list li {
+    padding: 5px 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 40px;
+    font-size: 2rem;
+    color: var(--color-white);
+    background-color: var(--primary-color);
+}
+
+.anime__container-list li:hover {
+    color: var(--primary-color);
+    background-color: var(--color-white);
+}
+
+.hidden {
+    display: none;
 }
