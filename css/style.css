@@ -7,6 +7,7 @@
 @import url("sections/background.css");
 @import url("sections/about.css");
 @import url("sections/culture.css");
+@import url("sections/anime.css");
 
 /* CSS variables for reusablity across all files (including above imported) */
 :root {
