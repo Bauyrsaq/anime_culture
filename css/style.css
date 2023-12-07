@@ -9,6 +9,7 @@
 @import url("sections/culture.css");
 @import url("sections/anime.css");
 @import url("sections/contacts.css");
+@import url("sections/footer.css");
 
 /* CSS variables for reusablity across all files (including above imported) */
 :root {
