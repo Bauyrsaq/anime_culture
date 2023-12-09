@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/public/paifang.png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Anime Culture</title>
+  </head>
+
+  <body>
+    <div class = "backgroundContainer">
+      <video id = "background" muted autoplay loop> 
+          <source src = "static/assets/animeBackground.mp4" type = "video/mp4"></src>
+      </video>
+    </div>
+
+    <header id="header" class="header">
+      <nav class="header__nav">
+        <div class="header__logo">
+          <h4>Anime Culture</h4>
+        </div>
+
+        <ul class="header__menu">
+          <li><a class="about" href="#about">About</a></li>
+          <li><a class="culture" href="#culture">Culture</a></li>
+          <li><a class="anime" href="#anime">Anime</a></li>
+          <li><a class="contacts" href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main id="main" class="main">
+      <section id="about" class="about__section">
+        <div class="about__container">
+          <div class="about__container-content">
+            <p class="about__container-label">The Magic of Anime:</p>
+            <p class="about__container-text">How Japanese Animation Culture is Transforming Society and Inspiring Millions</p>
+          </div>
+          <div class="about__container-image">
+            <img src="static/assets/anime_poster.png" alt="anime poster">
+          </div>
+        </div>
+      </section>
+
+      <section id="culture" class="culture__section">
+        <div class="culture__container">
+          <div class="culture__image">
+            <div class="culture__image-1">
+              <img src="static/assets/anime_culture.png" alt="anime culture">
+            </div>
+            <button class="culture__button" id="culture__button">
+              Learn More
+              <img src="static/assets/arrow-up-right.svg" alt="arrow-up-right">
+            </button>
+            <div class="culture__image-2">
+              <img src="static/assets/anime_octopus.png" alt="anime culture">
+            </div>
+          </div>
+          <div class="culture__content">
+            <p class="culture__content-label">Japanese Anime Culture</p>
+            <h3 class="culture__content-text">
+              Anime culture is a vibrant and global phenomenon that has captivated audiences around the world. 
+            </h3>
+            <p class="culture__content-subtext">Originating in Japan, anime refers to a style of animation that covers a wide range of genres and themes. It has evolved into a cultural phenomenon with a dedicated and passionate fanbase. Here are some key aspects of anime culture:</p>
+            <ul class="culture__content-list">
+              <li class="culture__content-list-item">Diversity of Genres</li>
+              <li class="culture__content-list-item">Artistic Styles</li>
+              <li class="culture__content-list-item">Fandom and Community</li>
+              <li class="culture__content-list-item">Cosplay</li>
+              <li class="culture__content-list-item">Manga</li>
+              <li class="culture__content-list-item">Global Impact</li>
+              <li class="culture__content-list-item">Influence on Pop Culture</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="anime" class="anime__section">
+        <div class="anime__container">
+          <h2 class="anime__container-title">Anime</h2>
+          <div class="anime__container-filters">
+            <ul class="anime__container-filters-list">
+              <li class="anime__container-filters-item">
+                <button id="genres" class="anime__container-filters-btn active" onclick="filterButtonClick(this)">
+                  <img src="static/assets/genres.png" alt="genres">
+                  Genres
+                </button></li>
+              <li class="anime__container-filters-item">
+                <button id="artistic_styles" class="anime__container-filters-btn" onclick="filterButtonClick(this)">
+                  <img src="static/assets/paint.png" alt="styles">
+                  Artistic styles
+                </button></li>
+              <li class="anime__container-filters-item">
+                <button id="community" class="anime__container-filters-btn" onclick="filterButtonClick(this)">
+                  <img src="static/assets/people.png" alt="community">
+                  Community
+                </button></li>
+              <li class="anime__container-filters-item">
+                <button id="cosplay" class="anime__container-filters-btn" onclick="filterButtonClick(this)">
+                  <img src="static/assets/cosplayer.png" alt="cosplay">
+                  Cosplay
+                </button></li>
+              <li class="anime__container-filters-item">
+                <button id="manga" class="anime__container-filters-btn" onclick="filterButtonClick(this)">
+                  <img src="static/assets/comic.png" alt="manga">
+                  Manga
+                </button></li>
+              <li class="anime__container-filters-item">
+                <button id="anime" class="anime__container-filters-btn" onclick="filterButtonClick(this)">
+                  <img src="static/assets/play.png" alt="anime">
+                  Anime
+                </button></li>
+            </ul>
+          </div>
+          <div class="anime__container-filter">
+
+            <div class="anime__container-filter-genres">
+              <ul class="anime__container-list">
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/genre/27-Shounen" class="anime__container-link">Senen</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/genre/4-Comedy" class="anime__container-link">Comedy</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/genre/22-Romance" class="anime__container-link">Romantics</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/genre/30-Sports" class="anime__container-link">Sport</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/genre/42-Seinen" class="anime__container-link">Seinen</a></li>
+                <li class="anime__container-item"><a href="anime.html#genres" class="anime__container-link">More...</a></li>
+              </ul>
+            </div>
+
+            <div class="anime__container-filter-artistic_styles hidden">
+              <ul class="anime__container-list">
+                <li class="anime__container-item"><a href="https://en.wikipedia.org/wiki/Sh%C5%8Djo_manga" class="anime__container-link">Shōjo (Shoujo)</a></li>
+                <li class="anime__container-item"><a href="https://en.wikipedia.org/wiki/Josei_manga" class="anime__container-link">Josei</a></li>
+                <li class="anime__container-item"><a href="https://en.wikipedia.org/wiki/Chibi_(style)" class="anime__container-link">Chibi</a></li>
+                <li class="anime__container-item"><a href="https://en.wikipedia.org/wiki/Moe_(slang)" class="anime__container-link">MOE</a></li>
+                <li class="anime__container-item"><a href="https://en.wikipedia.org/wiki/Seinen_manga#:~:text=In%20Japanese%2C%20the%20word%20seinen,ages%20of%2018%20and%2040" class="anime__container-link">Seinen</a></li>
+                <li class="anime__container-item"><a href="anime.html#styles" class="anime__container-link">More...</a></li>
+              </ul>
+            </div>
+
+            <div class="anime__container-filter-community hidden">
+              <ul class="anime__container-list">
+                <li class="anime__container-item"><a href="https://thehiveindex.com/redirect/?url=https%3A%2F%2Fdiscord.gg%2Fotaku&name=Anime%20Soul%20Discord&slug=anime-soul-discord&topics=anime&platform=discord&status=free" class="anime__container-link">Anime Soul Discord</a></li>
+                <li class="anime__container-item"><a href="https://thehiveindex.com/redirect/?url=https%3A%2F%2Fdiscord.gg%2Fanimazing&name=Animazing%20Anime&slug=animazing-anime&topics=anime&platform=discord&status=free" class="anime__container-link">Animazing Anime</a></li>
+                <li class="anime__container-item"><a href="https://thehiveindex.com/redirect/?url=https%3A%2F%2Fwww.animeleague.com%2F&name=Animeleague&slug=animeleague&topics=anime,gaming&platform=independent&status=free" class="anime__container-link">Animeleague</a></li>
+                <li class="anime__container-item"><a href="https://thehiveindex.com/redirect/?url=https%3A%2F%2Fdiscord.gg%2Fmyanimechat&name=My%20Anime%20Chat&slug=my-anime-chat&topics=anime&platform=discord&status=free" class="anime__container-link">My Anime Chat</a></li>
+                <li class="anime__container-item"><a href="anime.html#community" class="anime__container-link">More...</a></li>
+              </ul>
+            </div>
+
+            <div class="anime__container-filter-cosplay hidden">
+              <ul class="anime__container-list">
+                <li class="anime__container-item"><a href="https://www.etsy.com/listing/1438395319/japanese-anime-cosplay-costume-prop" class="anime__container-link">Inosuke Hashibira</a></li>
+                <li class="anime__container-item"><a href="https://www.etsy.com/listing/1589189967/anime-cosplay-costume-handmade-kimono?click_key=4d04d029f59de5a91c3fca26f7f1492ff539cbc7%3A1589189967&click_sum=d86ff844&external=1&rec_type=cs&ref=landingpage_similar_listing_top-6&frs=1" class="anime__container-link">Giyu Tomioka</a></li>
+                <li class="anime__container-item"><a href="https://www.etsy.com/listing/1590017485/anime-cosplay-costume-convention?click_key=c82348a9f9a2ed98dde76b76d16d23cdad190abe%3A1590017485&click_sum=2d0aee8b&external=1&rec_type=ss&ref=landingpage_similar_listing_top-7&frs=1" class="anime__container-link">Zenitsu Agatsuma</a></li>
+                <li class="anime__container-item"><a href="anime.html#cosplay" class="anime__container-link">More...</a></li>
+              </ul>
+            </div>
+
+            <div class="anime__container-filter-manga hidden">
+              <ul class="anime__container-list">
+                <li class="anime__container-item"><a href="https://shikimori.one/mangas/2-berserk" class="anime__container-link">Berserk</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/mangas/656-vagabond" class="anime__container-link">Vagabond</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/mangas/z13-one-piece" class="anime__container-link">One Piece</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/mangas/z51-slam-dunk" class="anime__container-link">Slam Dunk</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/mangas/z25-fullmetal-alchemist" class="anime__container-link">Fullmetal Alchemist</a></li>
+                <li class="anime__container-item"><a href="anime.html#manga" class="anime__container-link">More...</a></li>
+              </ul>
+            </div>
+
+            <div class="anime__container-filter-anime hidden">
+              <ul class="anime__container-list">
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/z9253-steins-gate" class="anime__container-link">Steins Gate</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/z11061-hunter-x-hunter-2011" class="anime__container-link">Hunter x Hunter (2011)</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/y28851-koe-no-katachi" class="anime__container-link">Koe no Katachi</a></li>
+                <li class="anime__container-item"><a href="https://shikimori.one/animes/32281-kimi-no-na-wa" class="anime__container-link">Kimi no Na wa</a></li>
+                <li class="anime__container-item"><a href="anime.html#anime" class="anime__container-link">More...</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="contacts__section">
+        <h2 class="contacts__title">You can contact us</h2>
+        <form class="contacts__form" action="/register" method="post">
+          <div class="contacts__form-user">
+            <label for="login">
+              Email
+            </label>
+            <input type="text" name="login" id="login" required>
+          </div>
+
+          <div class="contacts__form-message">
+            <p>Message</p>
+            <input id="message" type="text" name="message" required>
+          </div>
+
+          <button class="contacts__form-btn">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <p class="copyright">Copyright © 2023</p>
+      <div class="footer__social">
+        <ul class="footer_social-items">
+          <li class="footer__social-item"><a href="" class="footer__social-link"><img src="static/assets/instagram.svg" alt="Instagram"></a></li>
+          <li class="footer__social-item"><a href="" class="footer__social-link"><img src="static/assets/facebook.svg" alt="Facebook"></a></li>
+          <li class="footer__social-item"><a href="" class="footer__social-link"><img src="static/assets/twitter.svg" alt="Twitter"></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../static/js/script.js" type="module"></script>
+    <script src="../static/js/javascript.js"></script>
+  </body>
+</html>

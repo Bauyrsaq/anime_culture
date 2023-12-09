@@ -1,0 +1,106 @@
+.anime__section {
+    height: 500px;
+    background-image: url(../assets/anime_100.png);
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1.1);
+}
+
+.anime__container {
+    width: 80%;
+    padding: 54px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 2em rgb(69, 69, 69);
+}
+
+.anime__container-title {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--color-white);
+    margin-bottom: 30px;
+}
+
+.anime__container-filters {
+    padding-bottom: 10px;
+    border-bottom: 5px solid var(--color-white);
+    margin: 0 auto 50px;
+}
+
+.anime__container-filters-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.anime__container-filters-btn {
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+    font-size: 0.8rem;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    text-wrap: nowrap;
+}
+
+.anime__container-filters-btn:hover {
+    background-color: var(--color-white);
+    color: var(--secondary-color);
+    font-weight: 900;
+}
+
+.active {
+    background-color: var(--color-white);
+    color: var(--secondary-color);
+    font-weight: 900;
+}
+
+.anime__container-filters-btn img {
+    width: 36px;
+    height: 36px;
+}
+
+
+.anime__container-filter {
+    padding: 5px;
+    margin: 0 auto;
+}
+
+
+.anime__container-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.anime__container-list li {
+    padding: 5px 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 40px;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    background-color: var(--primary-color);
+}
+
+.anime__container-list li:hover {
+    color: var(--primary-color);
+    background-color: var(--color-white);
+}
+
+.hidden {
+    display: none;
+}

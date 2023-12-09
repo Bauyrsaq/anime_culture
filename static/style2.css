@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Itim&family=Montserrat:wght@400;700&family=Open+Sans:ital@1&family=Roboto:wght@100;300;500;700&family=Young+Serif&display=swap');
+
+/* other css file imports */
+@import url("sections2/genres.css");
+@import url("sections/header.css");
+@import url("sections/footer.css");
+
+/* CSS variables for reusablity across all files (including above imported) */
+:root {
+  --playfair-display: "Playfair Display", serif;
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --young-serif: 'Young Serif', serif;
+
+  --primary-color: #b1454a;
+  --secondary-color: #121212;
+  --third-color: #913d5b;
+
+  --black-200: #020202;
+  --black-300: #333333;
+  --black-400: #1f1e31;
+  --black-500: #555555;
+  --gray-100: #888888;
+
+  --color-white: #fff;
+  --color-creamson: #fff0de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--color-creamson);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+.anime__section {
+    background-image: none;
+}
+
+.footer.footer__anime {
+    background-color: var(--black-300);
+}
+
+.footer__anime .copyright {
+    color: var(--color-white);
+}
+
+.title {
+    cursor: pointer;
+}
